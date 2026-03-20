@@ -14,7 +14,7 @@ public class Main {
 
     // Task 2: Array Methods
     public static void fillArray(int[] arr, int index, Scanner sc) {
-        if (index == arr.length) {
+        if (index == arr.lengthя) {
             return;
         }
         arr[index] = sc.nextInt();
