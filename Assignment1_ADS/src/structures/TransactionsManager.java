@@ -9,7 +9,7 @@ public class TransactionsManager {
 
     private Node top;
 
-    // Стек работает по принципу LIFO (Last In, First Out)
+
     public void push(String action) {
         Node newNode = new Node(action);
         newNode.next = top;
