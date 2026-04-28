@@ -1,63 +1,33 @@
-Assignment 3 - Sorting and Searching Algorithm Analysis
+Assignment 2 - Physical & Logical Data Structures
 **Student:** Alimzhan Adilzhan
 **Group:** IT-2504
 
-Project Overview
-This project implements and compares fundamental sorting and searching algorithms to analyze their performance using Big-O notation in a practical Java environment.
 
-Selected Algorithms:
-Basic Sort: Bubble Sort
-Advanced Sort: Quick Sort
-Searching: Linear Search
+All my codes was wrote in Main.java used principles of OOP. 
 
-Algorithm Descriptions
-1. Bubble Sort
-   How it works: Iteratively steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
-   Time Complexity: O(n^2).
+Task 1: Bank Account Storage
+In this task, I created a BankAccount class to represent a user with fields for account number, name, and balance. I used a LinkedList to store these objects. This choice is based on the fact that a LinkedList is a logical data structure that allows for dynamic memory allocation, making it easy to add new accounts. I also implemented a search function to find users in the list and a display function to print all active accounts.
 
-2. Quick Sort
-   How it works: Uses a "divide and conquer" strategy by picking a 'pivot' element and partitioning the array around it.
-   Time Complexity: O(n \log n) average, O(n^2) worst case.
+Task 2: Deposit and Withdraw Operations
+I implemented financial logic to modify the data within the LinkedList. The program allows the user to select an account and perform a deposit or withdrawal. The system updates the balance field of the specific BankAccount object directly in memory. This demonstrates how data in a logical structure can be updated dynamically during program execution.
 
-4. Linear Search
-   How it works: Sequentially checks each element of the list until a match is found or the whole list has been searched.
-   Time Complexity: O(n).
+Task 3: Transaction History
+For this task, I used a Stack to track every transaction. This follows the LIFO (Last-In-First-Out) principle, which is ideal for an undo feature. Each transaction is pushed onto the stack as a string record. I implemented the pop method to remove the most recent transaction from the history and the peek method to allow the user to see the last action without deleting it.
 
-Experimental Results
-The algorithms were tested on random arrays of different sizes using System.nanoTime().
+Task 4: Bill Payment Queue
+I used a Queue to simulate a bill payment system. This follows the FIFO (First-In-First-Out) principle, meaning that bills are processed in the exact order they were added. Users can add bills to the queue, and the system processes them one by one, ensuring a fair and organized payment sequence.
 
-Bubble Sort (ns):
-10 (Small) = 11,800
-100 (Medium) = 334,100
-1000 (Large) = 6,987,800
+Task 5: Account Opening Queue
+I implemented another Queue to handle requests for opening new accounts. When a user submits their details, the request is placed in this queue. An administrator can then process these requests. Once processed, the account is moved from the queue into the main LinkedList of active accounts. This shows how multiple logical structures can interact with each other.
 
-Quick Sort (ns)
-10 (Small) = 17,200
-100 (Medium) = 51,800
-1000 (Large) = 703,900
+Task 6: Physical Data Structure (Array)
+To demonstrate a physical data structure, I created a standard Java array of BankAccount objects with a fixed size of 3. I initialized the array with predefined data. This task highlights the difference between an array, which has a static size and contiguous memory allocation, and a LinkedList, which is more flexible for growing data sets.
 
-Linear Search (ns)
-10 (Small) = 3,300
-100 (Medium) = 2,000
-1000 (Large) = 16,500
-
-
-Performance Analysis:
-
-Which sorting algorithm was faster? Quick Sort was significantly faster on larger datasets (1000 elements).
-
-Why? Because Quick Sort's O(n \log n) complexity is much more efficient than the quadratic O(n^2) complexity of Bubble Sort as n increases.
-
-Input Size Impact: As the size increased 10x (from 100 to 1000), Bubble Sort's time increased by a much larger factor than Quick Sort's.
-
-Searching Efficiency: Linear Search is efficient for small arrays but its time grows linearly with the number of elements.
+Brief summary of work process
+The work process involved setting up the basic class structure and then implementing each logical data structure one by one. I focused on making sure that the stack and queues handle data correctly without causing errors. I faced a minor issue with the scanner skipping lines when switching between numbers and strings, but I fixed it by using the parse method. The final step was creating a menu that integrates all these functions into a single banking application.
 
 
 
-
-Reflection:
-
-During this assignment, I learned the practical difference between theoretical Big-O complexity and actual execution time. Seeing Bubble Sort take nearly 7 million nanoseconds while Quick Sort handled the same data in 700 thousand was a clear demonstration of why algorithm selection matters in software development.
 
 
 
