@@ -13,15 +13,15 @@ Searching: Linear Search
 Algorithm Descriptions
 1. Bubble Sort
     How it works: Iteratively steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
-    Time Complexity: $O(n^2)$.
+    Time Complexity: O(n^2).
 
  2. Quick Sort
     How it works: Uses a "divide and conquer" strategy by picking a 'pivot' element and partitioning the array around it.
-    Time Complexity: $O(n \log n)$ average, $O(n^2)$ worst case.
+    Time Complexity: O(n \log n) average, O(n^2) worst case.
     
 4. Linear Search
    How it works: Sequentially checks each element of the list until a match is found or the whole list has been searched.
-   Time Complexity: $O(n)$.
+   Time Complexity: O(n).
 
  Experimental Results 
 The algorithms were tested on random arrays of different sizes using System.nanoTime().
